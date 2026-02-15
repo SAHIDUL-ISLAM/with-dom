@@ -28,3 +28,16 @@ const skyBlue = document.getElementById('skyblue');
 skyBlue.onclick = function changeblue(){
     document.body.style.backgroundColor = "skyblue";
 }
+
+
+// best practice bg color changer
+const goldColor = document.getElementById('gold-color').addEventListener('click',function(){
+    document.body.style.backgroundColor = "gold";
+});
+
+
+// text chnager 
+document.getElementById("btn-changer").addEventListener('click',function(){
+    const textChanger = document.getElementById('title-text');
+    textChanger.innerText = "Hello DOM DOMA DOM DOM";
+})
