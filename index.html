@@ -49,10 +49,22 @@
 <h1 id="title-text">Hello World</h1>
 <button id="btn-changer">Change the text</button>
 
+<br><br><br>
+
+<!-- user input and update text  -->
+ <label id="name" for="text">No Name</label><br>
+ <input id="catch-value" type="text" placeholder="Enter your name">
+ <button id="btn-update">Submit</button>
 
 
-
-    
+    <script>
+        document.getElementById('btn-update').addEventListener('click',function(){
+            const givenName = document.getElementById('catch-value');
+            const actualValue = givenName.value;
+            const text = document.getElementById('name');
+            text.innerText = actualValue;
+        })
+    </script>
     
     <script>
         // querySelector 
