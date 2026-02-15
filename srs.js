@@ -15,3 +15,16 @@ for(const tagname of tagnames ){
     console.log(tagname.innerText);
 }
 // getElementsByTagName
+
+
+// onclick call with function 
+function pageColorChange(){
+    document.body.style.backgroundColor = "pink";
+}
+
+//
+const skyBlue = document.getElementById('skyblue');
+
+skyBlue.onclick = function changeblue(){
+    document.body.style.backgroundColor = "skyblue";
+}
