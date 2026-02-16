@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub</title>
+    <link rel="stylesheet" href="github.js">
+</head>
+<body style="padding: 20px;">
+    <a href="index.html" style="padding: 15px 10px ; background-color: cadetblue; border-radius: 10px; text-decoration: none;">Main Page</a>
+    <br>
+    <br>
+    <br>
+
+    <h1>GitHub Input Field</h1>
+    <input id="input-delete" placeholder="write here" type="text">
+    <button id="btn-delete" disabled>Delete</button>
+
+
+    <script>
+        document.getElementById('input-delete').addEventListener('keyup', function(event){
+            const text = event.target.value;
+            const btnDelete = document.getElementById('btn-delete');
+
+            if(text === 'delete'){
+                console.log("Delete found");
+                btnDelete.removeAttribute('disabled');
+            }else{
+                console.log("delete not found");
+                btnDelete.setAttribute('disabled', true);
+            }
+        })
+    </script>
+</body>
+</html>
