@@ -41,3 +41,27 @@ document.getElementById("btn-changer").addEventListener('click',function(){
     const textChanger = document.getElementById('title-text');
     textChanger.innerText = "Hello DOM DOMA DOM DOM";
 })
+
+
+
+
+// comment 
+
+// document.getElementById('btn-for-comment').addEventListener('click',function(){
+//     const commentTextBox = document.getElementById('comment-text-box');
+//     const newComment = commentTextBox.value; 
+//     const commentContainer = document.getElementById('comment-container');
+//     const createElement = document.createElement('p');
+//     createElement.classList.add('comment');
+//     createElement.innerText = newComment;
+//     commentContainer.appendChild(createElement);
+
+// })
+
+
+
+
+// btn mouse enter
+document.getElementById("btn-mouse").addEventListener('mouseenter', function(){
+    console.log("Mouse Enter");
+})
