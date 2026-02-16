@@ -62,6 +62,12 @@ document.getElementById("btn-changer").addEventListener('click',function(){
 
 
 // btn mouse enter
-document.getElementById("btn-mouse").addEventListener('mouseenter', function(){
+// document.getElementById("btn-mouse").addEventListener('mouseenter', function(){
+//     console.log("Mouse Enter");
+// })
+
+
+// mouse move 
+document.getElementById("btn-mouse").addEventListener('mousemove', function(){
     console.log("Mouse Enter");
 })
