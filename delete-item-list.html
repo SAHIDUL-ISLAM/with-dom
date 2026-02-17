@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items List</title>
+</head>
+<body>
+    <section id="full-section">
+        <ul id="ul-list">
+            <ol id="item-list">
+                <li id="item-1">Dhaka</li>
+                <li id="item-2">Rajshahi</li>
+                <li id="item">Rangpur</li>
+                <li id="item">Commila</li>
+                <li id="item">CTG</li>
+                <li id="item">Khulna</li>
+            </ol>
+        </ul>
+    </section>
+
+<!-- event bubbling -->
+    <script>
+        // item-2 তে ক্লিক করলেও ol,ul,section এও ক্লিক হয়ে যাচ্ছে। এর জন্য শুধুমাত্র item-2 তে যদি ক্লিক এনাবল করতে চাই তবে stopPropagation() use করতে হবে। 
+        document.getElementById('item-1').addEventListener('click',function(event){
+            console.log('li 2');
+            event.stopPropagation();
+        })
+        //এবার item-2 দুইটি আইডিতে ব্যবহার করা হয়েছে, কিন্তু stopImmediatePropagation() ব্যবহার করার ফলে শুধু একটিতেই ক্লিক নিচ্ছে।
+        document.getElementById('item-2').addEventListener('click',function(event){
+            console.log('item 3');
+            event.stopImmediatePropagation();
+        })
+        document.getElementById('item-2').addEventListener('click',function(event){
+            console.log('item 3 but id same');
+        })
+        document.getElementById('item-list').addEventListener('click',function(){
+            console.log('Ol click')
+        })
+        document.getElementById('ul-list').addEventListener('click',function(){
+            console.log('ul click')
+        })
+        document.getElementById('full-section').addEventListener('click',function(){
+            console.log('full section click')
+        })
+    </script>
+</body>
+</html>
